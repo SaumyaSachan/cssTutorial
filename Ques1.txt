@@ -1,0 +1,81 @@
+Ques 1 -  What is the use of float property? Which property is the better alternative to it?
+
+SOl - The float property is used for positioning and formatting content e.g. let an image float left 
+      to the text in a container.
+      The float property can have one of the following values:
+
+    left - The element floats to the left of its container.
+    right - The element floats to the right of its container.
+    inherit - The element inherits the float value of its parent.
+    none - The element does not float (will be displayed just where it occurs in the text).
+
+EX -
+
+    .element {
+        float: left;  
+    }
+
+    .element {
+        float: right; 
+    }
+
+    .element {
+        float: none;  
+    }
+
+    
+   --> Modern CSS offers better layout alternative:- 
+                Flexbox (display: flex;) - best for flexible row/column layouts.
+
+        A flexbox always consists of:
+            Flex Container - the parent (container) <div> element
+            Flex Items - the items inside the container <div>
+
+   The CSS properties we use for the flex container are:
+      1) flex-direction
+      2) flex-wrap
+      3) flex-flow
+      4) justify-content
+      5) align-items
+      6) align-content
+  
+  EX -  
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    .flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: DodgerBlue;
+    }
+
+    .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    }
+    </style>
+    </head>
+    <body>
+
+    <h1>The flex-direction Property</h1>
+
+    <p>flex-direction: row; stacks the flex items horizontally (from left to right):</p>
+
+    <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    </div>
+
+    </body>
+    </html>
+
+
+                                                
+    
+   

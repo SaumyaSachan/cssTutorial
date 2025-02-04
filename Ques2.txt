@@ -1,0 +1,44 @@
+Ques 2 -  Explain the difference between absolute and relative positions.
+SOl -   
+   1) position: absolute;
+    An element with position: absolute; is positioned relative to the nearest positioned 
+    ancestor (instead of positioned relative to the viewport, like fixed).
+
+    However, if an absolute positioned element has no positioned ancestors, 
+    it uses the document body, and moves along with page scrolling.
+    Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+   2) An element with position: relative; is positioned relative to its normal position.
+      Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to 
+      be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+    EX - 
+
+    div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+    }
+
+    div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+    }
+
+
+    Feature	                        relative	                               absolute
+1)Positioning Basis     	   Moves relative to its          	   Moves relative to its nearest positioned 
+                                original position.                   ancestor (relative, absolute, fixed, sticky).
+2)Affects Other Elements?    	No, it leaves space in 	           Yes, it is removed from normal document flow.
+                                the document.
+3)Requires Parent          	   No, it stays in normal flow.	       Yes, if there is no positioned parent,
+  Positioning?                                                           it defaults to <html>.
+4)Common Usage	               Small movements without breaking 	  Floating elements like modals, tooltips, dropdowns, or overlays.
+                                layout.
+
+                               

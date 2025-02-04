@@ -1,0 +1,47 @@
+Ques 4 - How are inline and block elements different from each other?
+
+Sol - Block Element - A block element takes up the full width of its parent container and starts on a new line.
+
+      Characteristics of Block Elements:
+       1)Always starts on a new line
+       2)Takes up the full width available
+       3)Can contain other block or inline elements
+       4)Respects height, width, margin, and padding properties
+    
+    EX- <div>This is a block element</div>
+        <p>Paragraph is also a block element</p>
+        <h1>Heading is a block element</h1>
+        <section>Section is a block element</section>
+
+ --> Inline Element -An inline element only takes up as much width as necessary and does not start on a new line.
+
+    Characteristics of Inline Elements:
+    1)Does not start on a new line
+    2)Only takes up space needed for content
+    3)Cannot contain block elements
+    4)Ignores height and width properties (except with display: block;)
+
+
+EX - <span>This is an inline element</span>
+     <a href="#">Link is inline</a>
+     <strong>Bold text is inline</strong>
+     <img src="image.jpg" alt="Image is inline">
+
+
+Code -
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Block vs Inline</title>
+</head>
+<body>
+    <!-- Block elements take full width -->
+    <div style="background: lightblue;">This is a block element</div>
+    <p style="background: lightgreen;">This is another block element</p>
+
+    <!-- Inline elements only take content width -->
+    <span style="background: yellow;">This is an inline element</span>
+    <a href="#" style="background: pink;">This is an inline link</a>
+</body>
+</html>

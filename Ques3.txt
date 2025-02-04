@@ -1,0 +1,99 @@
+Ques 3 - What are the different types of CSS Selectors?
+
+ Sol - CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+   We can divide CSS selectors into five categories:
+
+   1)Simple selectors (select elements based on name, id, class)
+   2)Combinator selectors (select elements based on a specific relationship between them)
+   3) Pseudo-class selectors (select elements based on a certain state)
+   4) Pseudo-elements selectors (select and style a part of an element)
+   5)Attribute selectors (select elements based on an attribute or attribute value)
+
+-->Basic Selectors
+
+ 1)Universal Selector (*) – Selects all elements.
+
+* { margin: 0; padding: 0; }
+
+2)Element Selector – Selects elements by tag name.
+
+p { color: blue; }
+
+3)Class Selector (.) – Selects elements with a specific class.
+
+.button { background: red; }
+
+4)ID Selector (#) – Selects an element by its ID (must be unique).
+
+#header { font-size: 20px; }
+
+-->Grouping & Combinator Selectors
+
+1)Grouping Selector (A, B, C) – Applies the same style to multiple elements.
+
+h1, h2, p { font-family: Arial; }
+
+2) Descendant Selector (A B) – Targets elements inside another element.
+
+div p { color: green; }
+
+3)Child Selector (A > B) – Selects direct children only.
+
+div > p { font-weight: bold; }
+
+4)Adjacent Sibling (A + B) – Selects the next sibling element.
+
+h1 + p { color: gray; }
+
+5) General Sibling (A ~ B) – Selects all matching siblings after an element.
+
+h1 ~ p { font-size: 14px; }
+
+--> Attribute Selectors
+
+1)Select elements with a specific attribute:
+
+input[type="text"] { border: 1px solid black; }
+
+2) Partial match selectors:
+
+a[href^="https"] { color: green; }  
+a[href$=".pdf"] { color: red; }  
+a[href*="example"] { color: blue; }  
+
+--> Pseudo-Class Selectors (Select elements in a specific state)
+
+1)seudo-classes:
+
+a:hover { 
+    color: red;
+     }  
+input:focus { 
+    border: 2px solid blue; 
+    }  
+li:first-child { 
+    font-weight: bold; 
+    }  
+li:last-child { 
+    text-decoration: underline;
+     }  
+p:nth-child(2) { 
+    color: purple;
+     }  
+
+-->Pseudo-Element Selectors (Style parts of elements)
+
+1)pseudo-elements:
+
+p::first-letter { 
+    font-size: 2em; 
+    }  
+p::first-line { 
+    font-weight: bold; 
+    }  
+input::placeholder { 
+    color: gray; 
+    }  
+
+
